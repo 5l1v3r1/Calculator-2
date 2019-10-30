@@ -3,8 +3,10 @@
 import os, sys, time
 
 def write(z):
-    for e in z + '\n':                                                                          sys.stdout.write(e)
-        sys.stdout.flush()                                                                      time.sleep(0.03)
+    for e in z + '\n':
+        sys.stdout.write(e)
+        sys.stdout.flush()
+        time.sleep(0.03)
 print
 write ('\033[0m[\033[91;1m!\033[0m] \033[1;77mChecking...')
 print
