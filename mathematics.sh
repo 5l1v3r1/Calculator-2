@@ -57,7 +57,11 @@ case $choice in
 
 ;;
 
-0) exit 1
+0) python text.py
+
+exit 1
+
+;;
 
 *) echo "\033[0m[\033[91;1m!\033[0m] \033[1;77mInvalid option"
 esac
