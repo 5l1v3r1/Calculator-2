@@ -1,7 +1,7 @@
 #!/usr/bin/bash
-# Tools Aritmatika
+# Tools Mathematics
 # Coded by Senja
-# Github: github.com/thesixtynine/Mathematics
+# Github: github.com/thedarksec/Mathematics
 
 checkroot() {
 
@@ -54,9 +54,9 @@ printf '\e[1;77m
 template() {
 
 echo
-printf "\e[0m[\e[94;1m#\e[0m] Tools Aritmatika\n"
+printf "\e[0m[\e[94;1m#\e[0m] Tools Mathematics\n"
 printf "\e[0m[\e[93;1m*\e[0m] Coded by Senja\n"
-printf "\e[0m[\e[96;1m#\e[0m] My Github: @thesixtynine\n"
+printf "\e[0m[\e[96;1m#\e[0m] My Github: @thedarksec\n"
 sleep 1
 echo
 
