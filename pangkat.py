@@ -1,7 +1,4 @@
-# Pemanfkatan
-
 import os, sys, time
-
 def write(z):
     for e in z + '\n':
         sys.stdout.write(e)
