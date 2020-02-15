@@ -1,15 +1,14 @@
 #### Screenshot:
 ![](./Screenshoot.png)
-#### Usage:
+#### Cara Menginstall:
 ```
 pkg update && pkg upgrade
 apt-get install git
-apt-get install bash
 apt-get install python2
 git clone https://github.com/stepbystepexe/Calculator
 cd Calculator
 ls
-bash calculator.sh
+python2 calculator.py
 ```
 #### Paypal:
 https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=CLKRT5QXXFJY4&source=url
