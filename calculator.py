@@ -4,8 +4,8 @@
 # Coded by Nedi Senja
 # Github: https://github.com/stepbystepexe/Calculator
 
-from __opt__ import *
-import os, sys, time, random, marshal
+import os, sys, time, random
+from time import sleep
 
 info = """
 Nama        : Calculator
@@ -25,7 +25,13 @@ NB          : Manusia gax ada yang sempurna
 
 [ \033[4mGunakan tool ini dengan bijak \033[0m]\n """
 
-example = """\033[0;46;90;1m[     Calculator Terminal, My Githib: @stepbystepexe     ]\033[0m"""
+example = """\033[0;46;90;1m[         Calculator, My Github: @stepbystepexe          ]\033[0m"""
+
+logo = """
+\033[0;32m█▀▀▀▀ █▀▀▀█ █     █▀▀▀▀ █   █ \033[0;37m█    █▀▀▀█ ▀▀█▀▀ █▀▀▀█ █▀▀▀▄
+\033[0;32m█     █▀▀▀█ █     █     █   █ \033[0;37m█    █▀▀▀█   █   █   █ █▀▀▀▄
+\033[0;32m▀▀▀▀▀ ▀   ▀ ▀▀▀▀▀ ▀▀▀▀▀ ▀▀▀▀▀ \033[0;37m▀▀▀▀ ▀   ▀   ▀   ▀▀▀▀▀ ▀   ▀
+"""
 
 def restart():
     python = sys.executable
@@ -38,74 +44,80 @@ def write(o):
         sys.stdout.flush()
         time.sleep(0.03)
 
+def home():
+    os.system('clear')
+    os.system('reset')
+    time.sleep(1)
+    print
+    print(logo)
+    print(example)
+    print
+    write("\033[0m[ \033[32mINFO \033[0m] \033[3mSaya tidak real kalo code program saya ini ditiru")
+    write("         Seburuk apaun itu tolong hargai karya milik orang\033[0m\n")
+
 def pembagian():
+    write("\n\033[0m[\033[32m●\033[0m] \033[77;1mSedang memproses ...\033[0m")
+    sleep(1)
+    home()
+    number1 = input('\n\033[0m[\033[41;77;1m Nominal \033[0m] ')
+    number2 = input('\033[0m[\033[44;77;1m Di Bagi \033[0m] ')
     print
-    write ('\033[0m[\033[91;1m!\033[0m] \033[1;77mMengecek ...')
+    print('\033[0m[\033[43;90;1m  Hasil  \033[0m]\033[0m'),(number1 / number2)
     print
-    print ('\033[0m[\033[96;1m#\033[0m] \033[1;77mPembagian')
-    number1 = input('\033[0m[\033[95;1m/\033[0m] Masukan angka : \033[1;77m')
-    number2 = input('\033[0m[\033[95;1m/\033[0m] Ditambah berapa? : \033[1;77m')
-    print
-    print (number1 / number2)
-    print
-    raw_input('[ \033[92;1mKembali \033[0;77;1m]')
+    raw_input('[ Tekan Enter ]')
     restart()
 
 def perkalian():
+    write("\n\033[0m[\033[32m●\033[0m] \033[77;1mSedang memproses ...\033[0m")
+    sleep(1)
+    home()
+    number1 = input('\n\033[0m[\033[41;77;1m Nominal \033[0m] ')
+    number2 = input('\033[0m[\033[44;77;1m Di Kali \033[0m] ')
     print
-    write ('\033[0m[\033[91;1m!\033[0m] \033[1;77mMengecek ...')
+    print('\033[0m[\033[43;90;1m  Hasil  \033[0m]\033[0m'),(number1 * number2)
     print
-    print ('\033[0m[\033[96;1m#\033[0m] \033[1;77mPerkalian')
-    number1 = input('\033[0m[\033[95;1mx\033[0m] Masukan angka : \033[1;77m')
-    number2 = input('\033[0m[\033[95;1mx\033[0m] Dikali berapa? : \033[1;77m')
-    print
-    print (number1 * number2)
-    print
-    raw_input('[ \033[92;1mKembali \033[0;77;1m]')
+    raw_input('[ Tekan Enter ]')
     restart()
 
 def pengurangan():
+    write("\n\033[0m[\033[32m●\033[0m] \033[77;1mSedang memproses ...\033[0m")
+    sleep(1)
+    home()
+    number1 = input('\n\033[0m[\033[41;77;1m Nominal \033[0m] ')
+    number2 = input('\033[0m[\033[44;77;1m Kurangi \033[0m] ')
     print
-    write ('\033[0m[\033[91;1m!\033[0m] \033[1;77mMengecek ...')
+    print('\033[0m[\033[43;90;1m  Hasil  \033[0m]\033[0m'),(number1 - number2)
     print
-    print ('\033[0m[\033[96;1m#\033[0m] \033[1;77mPengurangan')
-    number1 = input('\033[0m[\033[95;1m-\033[0m] Masukan angka : \033[1;77m')
-    number2 = input('\033[0m[\033[95;1m-\033[0m] Dikurangi berapa? : \033[1;77m')
-    print
-    print (number1 - number2)
-    print
-    raw_input('[ \033[92;1mKembali \033[0;77;1m]')
+    raw_input('[ Tekan Enter ]')
     restart()
 
 def pemangkatan():
+    write("\n\033[0m[\033[32m●\033[0m] \033[77;1mSedang memproses ...\033[0m")
+    sleep(1)
+    home()
+    number1 = input('\n\033[0m[\033[41;77;1m Nominal \033[0m] ')
+    number2 = input('\033[0m[\033[44;77;1m Pangkat \033[0m] ')
     print
-    write ('\033[0m[\033[91;1m!\033[0m] \033[1;77mMengecek ...')
+    print('\033[0m[\033[43;90;1m  Hasil  \033[0m]\033[0m'),(number1 ** number2)
     print
-    print ('\033[0m[\033[96;1m#\033[0m] \033[1;77mPemangkatan')
-    number1 = input('\033[0m[\033[95;1m*\033[0m] Masukan angka : \033[1;77m')
-    number2 = input('\033[0m[\033[95;1m*\033[0m] Dipangkat berapa? : \033[1;77m')
-    print
-    print (number1 ** number2)
-    print
-    raw_input('[ \033[92;1mKembali \033[0;77;1m]')
+    raw_input('[ Tekan Enter ]')
     restart()
 
 def penjumlahan():
+    write("\n\033[0m[\033[32m●\033[0m] \033[77;1mSedang memproses ...\033[0m")
+    sleep(1)
+    home()
+    number1 = input('\n\033[0m[\033[41;77;1m Nominal \033[0m] ')
+    number2 = input('\033[0m[\033[44;77;1m Jummlah \033[0m] ')
     print
-    write ('\033[0m[\033[91;1m!\033[0m] \033[1;77mMengecek ...')
+    print('\033[0m[\033[43;90;1m  Hasil  \033[0m]\033[0m'),(number1 + number2)
     print
-    print ('\033[0m[\033[96;1m#\033[0m] \033[1;77mPertambahan')
-    number1 = input('\033[0m[\033[95;1m+\033[0m] Masukan angka : \033[1;77m')
-    number2 = input('\033[0m[\033[95;1m+\033[0m] Ditambah berapa? : \033[1;77m')
-    print
-    print (number1 + number2)
-    print
-    raw_input('[ \033[92;1mKembali \033[0;77;1m]')
+    raw_input('[ Tekan Enter ]')
     restart()
 
 os.system('clear')
 os.system('reset')
-time.sleep(1)
+sleep(1)
 print
 print(logo)
 print(example)
@@ -121,7 +133,7 @@ print("\033[0m[\033[94;1m#\033[0m] Informasi")
 print("\033[0m[\033[92;1m*\033[0m] Perbarui")
 print("\033[0m[\033[91;1m-\033[0m] Keluar")
 print
-option = raw_input("\033[0m[\033[1;95m/\033[0m] \033[1;77mMasukan opsi: \033[0m")
+option = raw_input("\033[0m(\033[105;77;1m/\033[0m) \033[1;77mMasukan opsi: \033[0m")
 if option == '01' or option == '1':
     pembagian()
 elif option == '02' or option == '2':
@@ -132,32 +144,32 @@ elif option == '04' or option == '4':
     pemangkatan()
 elif option == '05' or option == '5':
     penjumlahan()
-elif option.strip() in '& 2 lisensi'.split():
+elif option.strip() in '& 6 lisensi'.split():
     print
     os.system('nano LICENSE')
     print
     restart()
-elif option.strip() in '# 3 info'.split():
+elif option.strip() in '# 7 info'.split():
     os.system('clear')
     print(example)
     os.system('toilet -f smslant Calculator')
     print(info)
-    time.sleep(1)
+    sleep(1)
     print
     raw_input('[ Tekan Enter ]')
     restart()
-elif option.strip() in '* 4 perbarui'.split():
+elif option.strip() in '* 8 perbarui'.split():
     print
     os.system('git pull origin master')
     print
-    raw_input('\033[0m[ \033[92mTekan Enter \033[0m]')
+    raw_input('\033[0m[ \033[32mTekan Enter \033[0m]')
     restart()
-elif option.strip() in '- keluar 0'.split():
+elif option.strip() in '- 0 keluar'.split():
     print("\n\033[0m[\033[1;91m!\033[0m] \033[1;77mKeluar dari program!")
     print
     sys.exit(1)
 else:
     print("\n\033[0m[=\033[1;41;77m Pilihan Salah \033[0m=]")
     print
-    time.sleep(1)
+    sleep(1)
     restart()
