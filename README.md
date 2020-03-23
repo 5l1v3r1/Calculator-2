@@ -1,5 +1,5 @@
 # Calculator:
-*Sengaja diencrypt biar pada giat belajar, Karena belajar itu wajib biar pintar.*
+Sengaja diencrypt biar pada giat belajar, karena belajar itu wajib biar pintar.
 #### Screenshot:
 ![](./Skrinsut.png)
 #### Cara Menginstall:
