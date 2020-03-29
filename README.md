@@ -3,10 +3,10 @@
 
 <p align="center">
   <a href="https://www.python.org">
-    <img src="https://img.shields.io/badge/Language-Python3-blue.svg">
+    <img src="https://img.shields.io/badge/Language-Python2-blue.svg">
   </a>
   <a href="https://github.com/stepbystepexe/Calculator/blob/master/LICENSE">
-    <img src="https://img.shields.io/badge/License-MIT-red.svg">
+    <img src="https://img.shields.io/badge/License-Apache-red.svg">
   </a>
   <a href="https://opensource.org">
     <img src="https://img.shields.io/badge/Open%20Source-●-success.svg">
